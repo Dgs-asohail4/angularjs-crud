@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Test Angular</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <form name="myForm">
+            Email:
+            <input type="email" name="myAddress" ng-model="email">
+            <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span> <br> <br>
+            First Name: <input ng-model="firstname"> <br> <br>
+            Last Name: <input ng-model="lastname"> <br> <br>
+            Gender: 
+            <select ng-model="gender">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select> <br> <br>
+            <button ng-click="addUser()">Save</button>
+        </form>
+
+        <p ng-bind="gender"></p>
+        <p ng-bind="firstname"></p>
+        <p ng-bind="lastname"></p>
+        <p ng-bind="email"></p>
+
+        <ul>
+            <li ng-repeat="x in users">
+                {{x.firstname + " " + x.lastname}} <br>
+
+                <button ng-click="editUser(x.id)">Edit</button> <button ng-click="deleteUser(x.id)">Delete</button>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="Controller/personController.js"></script>
+</body>
+</html>

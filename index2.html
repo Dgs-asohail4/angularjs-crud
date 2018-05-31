@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Test Angular</title>
+</head>
+<body>
+    <div ng-app="parent">
+        <input ng-bind="name">
+        <p ng-bind="name"></p>
+        <form ng-app="child" name="myForm">
+            Email:
+            <input type="email" name="myAddress" ng-model="text">
+            <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+        </form>
+    </div>
+</body>
+</html>
