@@ -1,0 +1,15 @@
+<div ng-controller="RegisterCtrl">
+    <div class="container">
+        <div ng-show="error" class="alert alert-danger">
+            {{errorMsg}}
+        </div>
+        <form name="myform">
+            <input ng-model="email" name="myEmail" placeholder="Email"> <br> <br>
+            <input ng-model="name" placeholder="Name"> <br> <br>
+            <input ng-model="password" type="password" placeholder="Password"> <br> <br>
+            <input ng-model="conPassword" type="password" placeholder="Confirm Password"> <br> <br>
+            <button ng-click="register()">Register</button> <br> <br> <br> <br>
+        </form>
+        Already have an account <a href="" ng-click="routeToLogin()">Login!</a>
+    </div>
+</div>

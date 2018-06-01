@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="../module.js"></script>
+    <script src="../shared/directive/navbar.js"></script>
+    <script src="../factory/user/factory.js"></script>
+    <script src="../controller/core.js"></script>
+    <script src="../controller/Login/login.js"></script>
+    <script src="../controller/Register/register.js"></script>
+    <script src="../controller/Home/home.js"></script>
+    <title>Test Angular</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="mainController">
+        <my-navbar></my-navbar>
+        <div ng-view></div>
+    </div>
+</body>
+</html>
