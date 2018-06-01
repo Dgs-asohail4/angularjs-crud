@@ -1,0 +1,21 @@
+<div>
+    <table>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr ng-repeat="x in persons">
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td><button ng-click="editUser(x.id)">Edit</button>
+            </td>
+            <td><button ng-click="delteUser(x.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+   
+    <!-- <a href="#!/">Create User</a> -->
+<div>
+    
