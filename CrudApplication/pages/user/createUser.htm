@@ -1,12 +1,12 @@
 <div ng-controller="createUser">
     <form name="myForm">
         Email:
-        <input type="email" name="myAddress" ng-model="email">
+        <input type="email" name="myAddress" ng-model="$parent.email">
         <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span> <br> <br>
-        First Name: <input ng-model="firstname"> <br> <br>
-        Last Name: <input ng-model="lastname"> <br> <br>
+        First Name: <input ng-model="$parent.firstname"> <br> <br>
+        Last Name: <input ng-model="$parent.lastname"> <br> <br>
         Gender: 
-        <select ng-model="gender">
+        <select ng-model="$parent.gender">
             <option value="1">Male</option>
             <option value="2">Female</option>
         </select> <br> <br>

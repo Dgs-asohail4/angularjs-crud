@@ -8,6 +8,9 @@ app.config(function($routeProvider){
     .when("/users",{
         templateUrl:"listUser.htm"
     })
+    .when("/users/edit",{
+        templateUrl:"editUser.html"
+    })
     .otherwise({
         redirectTo:'/'
     });
