@@ -1,11 +1,16 @@
 <div>
-    <table>
+    <table datatable="ng" class="row-border hover">
+    <thead>
+
         <tr>
             <th>FirstName</th>
             <th>LastName</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
+    </thead>
+    <tbody>
+
         <tr ng-repeat="x in persons">
             <td>{{ x.firstname }}</td>
             <td>{{ x.lastname }}</td>
@@ -14,8 +19,8 @@
             <td><button ng-click="delteUser(x.id)">Delete</button>
             </td>
         </tr>
-    </table>
-   
+    </tbody>
+ </table>
+
     <!-- <a href="#!/">Create User</a> -->
 <div>
-    

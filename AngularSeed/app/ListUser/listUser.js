@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.listUser', ['ngRoute'])
+angular.module('myApp.listUser', ['ngRoute', 'datatables'] )
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/list', {
@@ -10,8 +10,8 @@ angular.module('myApp.listUser', ['ngRoute'])
 }])
 
 .controller('ListUserCtrl', ['$scope','$location','appService','$rootScope',function($scope, $location, appService, $rootScope) {
-   
-    $scope.persons = appService.getPerson();
+
+    $scope.persons = [{'firstname': 'Ahsan', lastname: 'sohail'}, {'firstname': 'Ahsan', lastname: 'sohail'}, {'firstname': 'Ahsan', lastname: 'sohail'}, {'firstname': 'Ahsan', lastname: 'sohail'}] // appService.getPerson();
     $scope.persons.sort(function(a,b){
         return a.id - b.id;
     })
@@ -22,15 +22,15 @@ angular.module('myApp.listUser', ['ngRoute'])
         appService.setEditId(id);
         $location.path("/edit");
     }
- 
+
     $scope.delteUser = function(id){
         appService.deletePerson(id);
         $scope.persons.forEach((element,index) => {
-            if(element.id == id) {             
+            if(element.id == id) {
                 $scope.persons.splice(index,1);
             }
         });
- 
+
     }
-  
+
 }]);

@@ -10,11 +10,11 @@ angular.module('myApp.editUser', ['ngRoute'])
 }])
 
 .controller('EditUserCtrl', ['$scope','$location','appService','$rootScope',function($scope, $location, appService, $rootScope) {
-   
 
-    if(!$rootScope.authenticated){
-        $location.path('/login');
-    }
+
+    // if(!$rootScope.authenticated){
+    //     $location.path('/login');
+    // }
 
     var id = appService.getEditId();
 

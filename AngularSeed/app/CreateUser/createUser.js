@@ -10,11 +10,11 @@ angular.module('myApp.createUser', ['ngRoute'])
 }])
 
 .controller('CreateUserCtrl', ['$scope','$location','appService','$rootScope',function($scope, $location, appService, $rootScope) {
-   
 
-    if(!$rootScope.authenticated){
-        $location.path('/login');
-    }
+
+    // if(!$rootScope.authenticated){
+    //     $location.path('/login');
+    // }
 
     $scope.addUser = function(){
 

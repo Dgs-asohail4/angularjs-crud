@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.login',
+  'datatables',
   'myApp.register',
   'myApp.home',
   'myApp.createUser',
